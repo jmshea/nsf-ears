@@ -1,0 +1,247 @@
+<html>
+<head>
+<TITLE>NSF EARS: Cloud-based Oblivious Spectrum Mapping and Allocation</TITLE>
+<META NAME="description" CONTENT="EARS: Cloud-based Oblivious Spectrum Mapping and Allocation">
+<META NAME="keywords" CONTENT="NSF, EARS, UF, Shea, Wong, Traynor, Privacy, Localization, Cloud-based, Spectrum Mapping, Jamming, Anti-jamming, Temporal Networks">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</head>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5860504-3");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script language="javascript"> 
+function toggle() {
+	var ele = document.getElementById("toggleText");
+	var text = document.getElementById("displayText");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "Click for more";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "Click to hide";
+	}
+} 
+</script>
+ 
+
+<body bgcolor="#FFFFFF" text="#000000" link="#df4440" vlink="30309e">
+<h1>NSF EARS: Cloud-based Oblivious Spectrum Mapping and Allocation </h1>
+
+<div style="font-size:14pt;  line-height:0.5em; margin-left:2em">
+ <p>NSF Award Number 1642973</p>
+
+ <p>Sponsored by the NSF Division of Computer and Network Systems (CNS)</p>
+
+ <p>Investigators: John M. Shea (PI), Patrick Traynor (Co-PI), and Tan F. Wong (Co-PI)</p>
+ <br>
+</div>
+<div style="display:block;margin-left:auto;margin-right:auto;width:35%"><img src="sc2-winner.jpg" width=100% title="" alt="Picture of Team GatorWings accepting the 1st place prize at the DARPA Spectrum Collaboration Challenge"  />Spectrum-sensing and mapping technology developed under this NSF EARS grant was leveraged by Team GatorWings (led by Profs. Wong and Shea) to win the DARPA Spectrum Collaboration Challenge.</div><br>
+
+<h2 id="goals">Goals</h2>
+<p>Recent rapid advances in dynamic spectrum access (DSA) highlight the philosophical shift in both technology development and policy making of radio spectrum management. The driving force behind this shift is the commonly accepted belief that the radio spectrum, as a scarce public resource, can be utilized more efficiently and fairly by the partnership of smarter management and looser regulations. This in turn will lead to democratization of the radio spectrum to people of wider socioeconomic strata, as well as to a much larger variety of present and future communication needs and services. This work seeks to assist in the democratization of such spectrum through:</p>
+<ul>
+<li><p>developing techniques for spectrum mapping to protect against internal and external attacks, and evaluating the tradeoffs between privacy protection and accuracy of the spectrum map,</p></li>
+<li><p>implementing the privacy-preserving spectrum mapping techniques using software-defined radios and Andriod phones,</p></li>
+<li><p>implementing our privacy-preserving spectrum mapping techniques using a Computing Agent/Spectrum Application Server/Spectrum Usage Database framework, run on a commercially available cloud-computing service, and</p></li>
+<li><p>conducting an outreach class on radio and dynamic spectrum access at the Cade Museum for Science+Innovation</p></li>
+</ul>
+<h2 id="activities">Activities</h2>
+<p>We are developing novel techniques to protect the privacy of users
+involved in sensing the radio spectrum as part of a DSA system. The
+techniques we propose are built on top of secure computing primitives,
+such as anonymyizing proxies, public-key encryption, and garbled
+circuits, which uses cryptographic techniques to allow users to
+compute a result without any of the parties being able to know the
+other parties' inputs to the computation. Although complete privacy is
+not possible in a spectrum sensing system, we are developing systems
+    that achieve <i>k</i>-anonymity in the presence of adversaries with various
+    capabilities. In <i>k</i>-anonymity, a user's location and
+    capabilities may only be reduced to one of <i>k</i> possibilities. A
+significant challenge in developing such techniques is that many
+secure computing primitives require high computational complexity, and
+thus cannot be implemented on many DSA devices, such as future
+generations of cellular phones. Thus, we are developing
+privacy-preserving spectrum sensing techniques that have sufficiently
+low complexity to be implemented on such devices. 
+  </p>
+<ul>
+<li> <b>Year 1:</b> In year 1, our activities primarily focused on the
+development of a distributed, privacy-preserving algorithm to perform
+localization on a RF source in the presence of a semi-honest
+(honest-but-curious) adversary. We developed an algorithm to achieve
+k-anonymity in the presence of such an adversary. Our algorithm is
+based on a distributed particle-filter algorithm in which information
+is fused on a binary tree, where information is passed through an
+anonymizing proxy to obscure the information's source. The anonymyzing
+proxy is a radio that is internal to the network that is elected
+through a voting scheme, along with a leader node for the
+process. This work was reported in a conference paper (see Outcomes
+below), and a journal version is being prepared with a more thorough
+security analysis and additional experimental results.</li>
+
+<li> <b>Year 2:</b> In year 2, our efforts have focused on maturing
+our approaches to distributed, privacy-preserving localization of a RF
+source along two major thrusts. We are further developing our efforts
+on RF localization to allow for mobile sensing agents that can
+optimize their locations to rapidly localize an RF source in the
+presence of channel noise, shadowing, and unknown channel path-loss
+exponents. Deep reinforcement learning is being used to determine the
+optimal movement for these agents both when privacy is not a concern
+and when the movements of the agents must be chosen to protect the
+location of the RF source from an adversary that can observe the
+movements of the mobile sensing agents.  We are building more
+efficient techniques for preserving privacy during distributed
+computation by leveraging trusted execution environments, also known
+as secure enclaves, that are built into many modern processors. In
+particular, our current efforts focus on considering how the Intel
+Software Guard Extensions (SGX) can be leveraged in such systems. We
+are developing systems that enable a mix of SGX and secure multiparty
+computation (SMC) techniques, which are needed for those systems that
+are not equipped with SGX-enabled hardware. </li>
+
+<li> <b>Year 3:</b> Our year 3 activities have four main thrusts: 
+    1) further development of techniques to leverage secure enclaves to
+    provide privacy-preserving computation without the need for heavyweight
+    cryptographic primitives (such as fully homomorphic encryption), 2) implementation
+    of spectrum sensing techniques using software-defined radios, 3) research on
+    applications of machine learning for dynamic spectrum sharing, and 4) research
+    on mobile spectrum sensing in the presence of an adversary. A highlight of
+    this work is our implementation of spectrum sensing and mapping techniques
+    on the USRP X310 software-defined radio. We utilize a FPGA-based spectrum
+    sensor to rapidly monitor spectrum utilization across many channels. This
+    information is fused with spectrum reports and geolocation information by
+    our spectrum mapping software, which is implemented in C++. The result is a
+    time-varying spectrum map that identifies how the radio spectrum is being
+    used across space, frequency, and time. More details can be found in our publications 
+    below.</li>
+
+<li> <b> Year 4: (extension)</b> Our year 4 activities had 2 main thrusts: 1) 
+We  further developed our implementations of spectrum mapping techniques on
+software-defined radios.  2) We have continued to research privacy in spectral
+sensing systems, and our current research is primarily focused on privacy
+implications related to movements of either the RF emitter or mobile sensors
+that are optimizing their position to localize the RF emitter. 3) We have 
+continued our research on leveraging secure enclaves to aid in privacy-perserving
+signal localization.  A notable outcome from our research was that Team GatorWings,
+which includes several faculty and students who also worked on this grant, used 
+spectrum sensing and mapping techniques developed under this grant in their radio 
+used in the DARPA Spectrum Collaboration Challenge (SC2). Team GatorWings won the
+SC2 Championship Event in October 2019.</li>
+
+
+</ul>
+
+
+
+<h2 id="personnel">Personnel</h2>
+<ul>
+<li>Faculty</li>
+<ul>
+<li><a href="http://wireless.ece.ufl.edu/jshea">John M. Shea (PI)</a></li>
+<li><a href="https://www.cise.ufl.edu/~traynor">Patrick Traynor (Co-PI)</a></li>
+<li><a href="http://wireless.ece.ufl.edu/twong">Tan F. Wong (Co-PI)</a></li>
+</ul>
+<li>  Ph.D. Students</li>
+<ul>
+<li>Caleb Bowyer, ECE</li>
+<li>Joseph Choi, CISE</li>
+<li>Jixin Feng, ECE (graduated with Ph.D.)</li>
+<li>Tyler Ward, ECE</li>
+<li>David Greene, ECE</li>
+<li>Joshua Marker, ECE</li>
+<li>Anirban Bhattacharya, ECE</li>
+</ul>
+<h2 id="outcomes">Outcomes</h2>
+<p>Our research has resulted in techniques for privacy-preserving localization techniques in distributed networks, analysis techniques for time-varying networks, and techniques to protect networks from jamming attacks. Our work has been reported in three published conference papers (journal articles are in progress):</p>
+<ul>
+<li>In <a href="https://par.nsf.gov/servlets/purl/10046080">&quot;Privacy Preserving Localization Using a Distributed Particle Filtering Protocol&quot;</a> (IEEE MILCOM 2017), we developed a privacy preserving localization algorithm based on public-key encryption, anonymous proxies, and a distributed particle filtering protocol. Our protocol is described in detail in that work, and simulation and experimental results (using Ettus Research B210 USRP radios) demonstrate that our proposed mechanism allows for accurate localization with low error.
+
+  <div align=center>
+<p><img src="protocol_interactions.png" width=35% title="Roles of radios in a distributed network and interations during privacy-preserving localization protocol" alt="Nodes may be elected to be leader or anonymizer, may be chosen to participate in localization or excluded if measurement information is poor. All sensitive communication passes through anonymizer node that hides source of information." /><br>
+<b>Roles of radios in a distributed network and interations during
+privacy-preserving localization protocol</b></p>
+</div>
+
+  <div align=center>
+<p><img src="tree.png" width=80% title="Localization is performed using a distributed particle-filter algorithm that fuses information from different radios from the leaves to the root of a binary tree" alt="Three level binary tree, where each level shows the particles preserved after the radio associated with that node in the tree fuses its location information with that of its descendants in the tree" /><br>
+  <b>Localization is performed using a distributed particle-filter algorithm that fuses information from different radios from the leaves to the root of a binary tree
+    </b>
+</p>
+</div>
+</li>
+<li><p>In <a href="https://par.nsf.gov/servlets/purl/10046905">&quot;An Adjacency Matrix Approach to Delay Analysis in Temporal Networks&quot;</a> (IEEE MILCOM 2017), we develop analytical techniques to model the flow of information across a temporal network, which is a graph with time-varying edges. Temporal networks can be used to model mobile wireless networks with time-varying links, and these techniques may be used to analyze the flow of private information in such networks.</p></li>
+<li><p>In <a href="https://par.nsf.gov/servlets/purl/10046904">&quot;Positioning Helper Nodes to Improve Robustness of Wireless Mesh Networks to Jamming Attacks&quot;</a> (IEEE GlobeCom 2017), we develop techniques to enhance the robustness of wireless networks to jamming attacks, which can be used to disrupt spectrum-sensing processes.</p></li>
+<li><p> In <a href="https://ieeexplore.ieee.org/document/8886012">&quot;Optimal Jammer Placement in the Real Plane to
+    Partition a Wireless Network&quot;</a> (IEEE WCNC 2019), we develop new algorithms to find
+minimum cardinality jammer placements to partition a wireless
+network. Prior to this paper, optimal solutions were only available
+when the placement of jammers was constrained to the locations of the
+communication nodes. The algorithms in this paper solve a type of disk
+cover problem in which the objective is not to cover all of the
+communication nodes but instead only to cover a subset required to
+achieve a network partition goal. This same approach may be useful for
+other purposes in communication networks, such as the placement of
+aerial routers to enhance the robustness of the network topology.  A
+variation on this algorithm may be useful for network clustering. For
+instance, in the context of distributed RF localization, such a
+clustering can be used to enable sets of nearby sensing agents to
+either fuse their measurements, elect a single representative to carry
+out measurements, or alternate among the agents to provide
+measurements and carry out distribute computations.
+    <li><p> In <a href="https://dl.acm.org/doi/10.1145/3321705.3329835">&#8220;A Hybrid Approach to Secure Function Evaluation using SGX&#8221;</a> (ACM Asia CCS 2019), we develop techniques for two-party secure function evaluation (2P-SFE) that allows a designer to partition parts of the protocol that are evaluated inside a secure enclave and those parts that are implemented via standard cryptographic techniques. This approach allows increased performance while providing protections against side-channel attacks on the secure enclave. We can leverage this approach to reduce the cryptographic overhead of privacy-preserving localization and mapping. </p></li>
+    <li><p> In <a href="https://ieeexplore.ieee.org/document/8935725"> &quot;Reinforcement Learning for Mixed Cooperative/Competitive Dynamic Spectrum Access&quot;</a> (DySPAN 2019), we report on two appoaches to dynamic spectrum sharing using spectrum sensing and mapping techniques developed under this grant. We compare the performance of a strategy learned via reinforcement learning versus a human-tuned &quot;expert system&quot; strategy. The results show similar performance for the two strategies for the scenario investigated, with the expert system performing slightly better overall. This paper provides some high-level overview of our use of spectrum sensing and mapping, as well as our decision making processes, used in the DARPA Spectrum Collaboration Challenge. </p></li>
+    <li><p> In <a href="milcom_2019.pdf">&#8220;Identifying bottleneck nodes using packet delay statistics&#8221;</a> (MILCOM 2019), we investigate methods for identifying single bottlenecks in communication networks when only round-trip delay statistics are available. </p></li>
+    <li><p> One of the goals of this project is to investigate how we can leverage cloud computing in privacy-preserving spectrum sensing. Our move to leverage secure enclaves has complicated this because most cloud operators do not provide secure enclaves as part of their service because of various technical challenges that it presents. In <a href="http://dx.doi.org/10.1145/3292006.3300030">&#8220;A Practical Intel SGX Setting for Linux Containers in the Cloud&#8221;</a> (ACM CODASPY 2019), we develop an lxc-based container system that allows Intel SGX (secure enclave) applications to run inside a container in the cloud, while providing all the critical features of SGX, such as remote attestation. We demonstrate that up to 100 containerized SGX applications can be run with reasonable overhead in our system.</p></li>
+
+    <li><p> In <a href="http://wireless.ece.ufl.edu/jshea/icc21.pdf">&#8220;A Deep Q-Learning Dynamic Spectrum Sharing Experiment&#8221;</a> (submitted to IEEE ICC 2021), we report results on applying deep Q-learning for optimizing spectrum sharing among a group of homegeneous networks, where each network makes decisions on how much spectrum to use and which frequencies to transmit on. In particular, we demonstrate that deep Q-learning is able to identify and take advantage of spatial reuse opportunities. All results for the paper are based on experiments carried out in Colosseum and leverage our spectrum mapping and occupancy measurements in making channel assignment decisions.</p>
+
+<p>A conceptual image of our deep Q-network's structure is shown below. We also include visualizations of each team's frequency use over time for two different strategies. The fair-use strategy assigns each of the 5 teams and equal share of the spectrum resources. The deep Q-learning  stratey uses   a convolutional neural network with three hidden layers (and 4 convolution kernels) to optimize spectrum usage via machine learning. In both cases, the strategies choose the number of channels to use, and identical processes using spectrum mapping and occupancy information are used to determine the particular channels each network uses. The deep Q-network was able to score approximately 48% higher than the fair share assignment over multiple runs in the Alleys of Austin scenario in Colosseum.</p>
+<div align=center>
+<p><img src="deepq.png" width=40% title="Deep Q-network used for optimizing spectrum sharing" alt="A visualization of a 4-layer convolutional nerual network that outputs Q-values for used in Q-learning" /><br>
+  <b>Deep convolutional network trained to perform Q-learning for optimizing the number of channels used by a network of radios in the Alleys of Austin scenario in Colosseum </b>
+</p>
+</div>
+
+</p></li>
+</ul>
+<div align=center>
+<p><img src="channel-vis-fair.png" width=40% title="Spectrum usage for fair share strategy in an Alleys of Austin scenario" alt="A diagram showing usage of spectrum over time by five different teams. The diagram shows that each team is able to claim disjoint channels that are used throughout the match." /><br>
+  <b>Spectrum usage for five teams in the Alleys of Austin scenario with a fair-share criterion, in which each team uses 1/5 of the available spectrum. </b>
+</p>
+</div>
+
+</p></li>
+</ul>
+<div align=center>
+<p><img src="channel-vis-ml.png" width=40% title="Deep Q-network used for optimizing spectrum sharing" alt="A visualization of a 4-layer convolutional nerual network that outputs Q-values for used in Q-learning" /><br>
+  <b>Spectrum usage for five teams in the Alleys of Austin scenario with spectrum usage for each team decided by a deep Q network. Spectrum use varies across team, and significant spatial reuse is observed between teams 0 and 4. An improvement in match score of approximately 48% was observed in comparison to the fair-share assignment. </b>
+</p>
+</div>
+
+</p></li>
+</ul>
+
+
+
+<h3> Team GatorWings won the DARPA Spectrum Collaboration Challenge Championship</h3>
+Two of this grant's PIs (Wong and Shea) led Team GatorWings to the overall
+championship of the DARPA Spectrum Collaboration Challenge (SC2) in October 2019.
+Team GatorWings also included three of the graduate students that have
+worked on this grant (Greene, Ward, and Bowyer).
+Our team leveraged these students' work and expertise developed under this
+grant, including that on spectrum sensing, information fusion, and machine
+learning for spectrum-sensing applications. Over 90 teams registered for the
+SC2 competition. Team GatorWings was also funded in the first two years by an
+EAGER grant from NSF.
+</basefont>
+</body>
+</html>
