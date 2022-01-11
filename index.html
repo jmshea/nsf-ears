@@ -259,6 +259,30 @@ measurements and carry out distribute computations.
             </p>
         </div>
 
+        The performance of these algorithms is assessed by implementing the
+        sensor fusion algorithms in SGX on an HP computer with an Intel Skylake
+        quad-core CPU supporting SGXv1 and in TrustZone on a Hisilicon HiKey 620
+        with an ARM Cortex A53 octa-core CPU. Performance results, shown below,
+        show that SGX overhead is generally much less than TrustZone overhead,
+        and results in execution times of < 1 s for all parameters considered,
+        which will be acceptable for most applications. The TrustZone overhead
+        is much higher and requires execution times as high as 9.5 s, which may
+        not be acceptable in some applications. If a centralized architecture is
+        acceptible, this may motivate the use of a SGX container in the cloud;
+        however, additional research may still be needed on attestation across
+        diverse enclaves.
+
+        <div align=center>
+            <p><img src="uemcon-results.png" width=80% title="Micro- and macro-performance of sensor fusion
+                         in an enclave on SGX (a-c) and TrustZone (d-e) architectures."
+                         Design requirements for decentralized architecture (ArchD)." alt="A set of six figures illustrating the relative performance of spectrum measurement fusion using a particle filter algorithm. The first three figures illustrate the performance in an Intel SGX environment, and the last three figures illustate the performance in an ARM TrustZone environment. Macro performance less than 1 s is achieved on SGX, whereas TrustZone takes up to 9.5 s." /><br>
+                <b>Micro- and macro-performance of sensor fusion
+                    in an enclave on SGX (a-c) and TrustZone (d-e) architectures.</b>
+            </p>
+        </div>
+
+
+
 
     </li> <!-- End of UEMCON list item -->
 
