@@ -219,8 +219,7 @@ measurements and carry out distribute computations.
 </p>
 </div>
 
-</p></li>
-</ul>
+
 <div align=center>
 <p><img src="channel-vis-fair.png" width=40% title="Spectrum usage for fair share strategy in an Alleys of Austin scenario" alt="A diagram showing usage of spectrum over time by five different teams. The diagram shows that each team is able to claim disjoint channels that are used throughout the match." /><br>
   <b>Spectrum usage for five teams in the Alleys of Austin scenario with a fair-share criterion, in which each team uses 1/5 of the available spectrum. </b>
@@ -228,14 +227,42 @@ measurements and carry out distribute computations.
 </div>
 
 </p></li>
-</ul>
 <div align=center>
 <p><img src="channel-vis-ml.png" width=40% title="Deep Q-network used for optimizing spectrum sharing" alt="A visualization of a 4-layer convolutional nerual network that outputs Q-values for used in Q-learning" /><br>
   <b>Spectrum usage for five teams in the Alleys of Austin scenario with spectrum usage for each team decided by a deep Q network. Spectrum use varies across team, and significant spatial reuse is observed between teams 0 and 4. An improvement in match score of approximately 48% was observed in comparison to the fair-share assignment. </b>
 </p>
+
 </div>
 
-</p></li>
+<li><p> In <a href="uemcon21.pdf">&#8220; Privacy-Preserving Localization using Enclaves &#8221;</a>
+    (IEEE UEMCON 2021), we present centralized and decentralized architectures for privacy-preserving localization
+    using secure enclaves.  In the centralized architecture, there  is a fusion center (FC) that
+    is trusted by all of the sensors that performs the fusion of the sensor
+    data. In the decentralized architecture, the fusion operation is performed
+    across the entire set of sensors.</p>
+
+    <p>We identify a common set of security requirements for both architectures, which are:</p>
+        <ul><li><b>N1: Preventing eavesdropping.</b> Sensor inputs that are transmitted in the clear may be intercepted by an adversary. As a step during remote attestation, a symmetric key is provisioned for all future communication with the target enclave. Hence, the sensor can be confident that its inputs will not be compromised during transit to other enclaves.</li>
+            <li> <b>N2: Confirming authenticity of the fusion result.</b>b> A malicious FC (ArchC) or leader (ArchD) might disregard the true fusion result and disseminate an incorrect result. This could be mitigated by having the fusion code enclave, which is measured by each sensor during attestation, directly return the fusion result to sensors over the established secure channels.</li>
+            <li> <b> N3: Defeating crafted/dishonest inputs.</b> An enclave may be required of all sensors contributing to the localization when considering the presence of malicious sensors. Parts of the spectrum measurement could then be integrated with each sensor’s enclave and verified by the enclaves via attestation to ensure only authentic spectrum measurements are contributed to the ongoing localization.</li>
+        </ul>
+
+        <p> We then determing specific security needs for each of the considered architectures. The figures below illustrate the key requirements for each architecture.</p>
+        <div align=center>
+            <p><img src="archc.png" width=40% title="Design requirements for centralized architecture (ArchC)." alt="A diagram showing the  connections between sensors and a fusion center. The sensor and fusion centor each have an enclave. Needs for secure channels and attestation are indicated." /><br>
+                <b>Various design requirements for Centralized Architecture (ArchC) for Sensor Fusion.</b>
+            </p>
+        </div>
+        <div align=center>
+            <p><img src="archd.png" width=40% title="Design requirements for decentralized architecture (ArchD)." alt="A diagram showing the  connections between sensors, a root sensor in a tree formation, and a leader. Each sensor, including the root and leader, have a secuire enclave. Needs for secure channels and attestation are indicated." /><br>
+                <b>Various design requirements for Decentralized Architecture (ArchC) for Sensor Fusion.</b>
+            </p>
+        </div>
+
+
+    </li> <!-- End of UEMCON list item -->
+
+
 </ul>
 
 
