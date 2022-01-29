@@ -1,1 +1,9 @@
 .ipynb_checkpoints
+auto
+dev
+dev_audio
+*.aux
+*.log
+*.out
+*.synctex.gz
+noarch
