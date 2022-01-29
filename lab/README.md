@@ -1,5 +1,11 @@
+# Collaborative Spectrum Sharing Lab 
 
-This lab uses audio signals to teach middle-school children about:
+*Developed under National Science Foundation Grant 1642973, "EARS: Cloud-based Oblivious Spectrum Mapping and Allocation"*
+
+**Target audience:** Middle-School children 
+
+**Lab Topics:**
+This lab uses audio signals and interactive experiences with Python and software-defined radios to teach students about:
 * frequency
 * digital modulation
 * frequency division multiple access
@@ -30,7 +36,8 @@ IPython=7.29.0
 Lab 4 requires a working version of the RTLSDR-Scanner software, which is not currently well supported. In the future, we will try to put a version  that works with recent python libraries here. A good alternative may need to be found and documented.
 
 
-Set up:
+**Set-up:**
+
 * Each child should be given a copy of the handout.pdf file. 
 * Each computer used by the children should have copies of the for_students, audio_files, and plots directories.
 * The instructor's computer should have a copy of all of the directories, but the instructor can find additional
